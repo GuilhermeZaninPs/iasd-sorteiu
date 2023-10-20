@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import hacking from './hacking-img.png';
 import './App.css';
+
+import Typewriter from 'typewriter-effect';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <img src={hacking} alt="background hacking" className='bg-img'/>
+        <div className='black-screen'>
+          <Typewriter
+            options={{
+              strings: ['Você foi hackeado!'],
+              loop: true,
+              autoStart: true,
+            }}
+          />
+        </div>
     </div>
   );
 }
